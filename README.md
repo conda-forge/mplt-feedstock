@@ -117,4 +117,4 @@ Feedstock Maintainers
 =====================
 
 * [@jordan-heemskerk](https://github.com/jordan-heemskerk/)
-
+* [@stringhamc](https://github.com/stringhamc/)
