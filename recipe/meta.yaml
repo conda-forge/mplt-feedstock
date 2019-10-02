@@ -1,5 +1,5 @@
 {% set name = "mplt" %}
-{% set version = "2.0.6" %}
+{% set version = "2.0.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 2e755db3e8efa9c4dc7728f063458280738d8a4c28e455966c77151173ac791b
+  sha256: 88513d1a7a1e96862c77e7ba9638061f274861cdcd33c1dd5d608a88d50dcebd
 
 build:
   number: 0
