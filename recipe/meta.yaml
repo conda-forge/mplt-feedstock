@@ -1,17 +1,17 @@
 {% set name = "mplt" %}
-{% set version = "2.0.7" %}
+{% set version = "2.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 88513d1a7a1e96862c77e7ba9638061f274861cdcd33c1dd5d608a88d50dcebd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9b0ec4fc5727438a0730fcd2a7bef001333b09b0d9b89ca560d1bdd0d87870e8
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -24,11 +24,11 @@ requirements:
     - python
 
 about:
-  home: "http://github.com/stringhamc/mplt"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE"
-  summary: "Set of niceties wrapping matplotlib for signal processing"
+  home: http://github.com/stringhamc/mplt
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Set of niceties wrapping matplotlib for signal processing
 
 extra:
   recipe-maintainers:
