@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9b0ec4fc5727438a0730fcd2a7bef001333b09b0d9b89ca560d1bdd0d87870e8
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
     - matplotlib-base
     - numpy
-    - python
+    - python >={{ python_min }}
 
 about:
   home: http://github.com/stringhamc/mplt
